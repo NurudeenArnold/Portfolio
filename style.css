@@ -13,7 +13,8 @@
     --bg-color: #111111;
     --second-bg-color: #151515;
     --text-color: white;
-    --main-color: #bb5c5c;
+    --main-color: #fd2d2d;
+    /*--main-color: #bb5c5c;*/
 }
 html {
     font-size: 62.5%;
@@ -356,18 +357,23 @@ span{
 }
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(5,1fr);
     align-items: center;
     gap: 2.5rem;
     padding: 30px;
 }
 .skills-box{
+    position: relative;
     background-color: var(--main-color);
     color: black;
     height: 250px;
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
 }
 .skills-box:hover{
         background: white;
@@ -375,6 +381,8 @@ span{
         transform: scale (1.03);
 }
 .skills-box .skills-info{
+    position: relative; 
+    z-index: 1; 
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -396,7 +404,9 @@ span{
     margin: auto;
 }
 .skills-info a{
-    vertical-align: middle;
     font-size: 150px;
-    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
