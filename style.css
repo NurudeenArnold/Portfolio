@@ -348,7 +348,7 @@ span{
 
 
 .skills{
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     color: white;
 }
 .skills h2{
@@ -376,9 +376,9 @@ span{
     text-align: center; 
 }
 .skills-box:hover{
-        background: white;
-        color: var(--main-color);
-        transform: scale (1.03);
+    background: white;
+    color: var(--main-color);
+    transform: scale (1.03);
 }
 .skills-box .skills-info{
     position: relative; 
