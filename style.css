@@ -346,7 +346,6 @@ span{
     margin: auto;
 }
 
-
 .skills{
     background: var(--second-bg-color);
     color: white;
@@ -409,4 +408,59 @@ span{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.projects{
+    background: var(--bg-color);
+    color: white;
+}
+.projects h2{
+    margin-bottom: 5rem;
+    color: white;
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.projects-box{
+    background-color: var(--main-color);
+    color: black;
+    height: 250px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    padding: 20px 20px 20px 20px;
+}
+.projects-box:hover{
+        background: white;
+        color: var(--main-color);
+        transform: scale (1.03);
+}
+.projects-box .projects-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+.projects-info h4{
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.projects-info h5{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.projects-info p{
+    padding-top: 20px;
+    font-size: 2.3rem;
+    font-weight: 400;
+    max-height: 100px;
+    margin: auto;
 }
