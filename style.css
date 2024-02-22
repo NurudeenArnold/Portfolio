@@ -13,7 +13,8 @@
     --bg-color: #111111;
     --second-bg-color: #151515;
     --text-color: white;
-    --main-color: #fd2d2d;
+    --main-color: #00578a;
+    /*--main-color: #fd2d2d;
     /*--main-color: #bb5c5c;*/
 }
 html {
@@ -44,7 +45,7 @@ body {
     transition: 0.3s ease-in-out;
 }
 .logo:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .navbar a{
     font-size: 1.8rem;
@@ -355,7 +356,7 @@ span{
 }
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(6,1fr);
     align-items: center;
     gap: 2.5rem;
     padding: 30px;
@@ -432,11 +433,11 @@ span{
     transition: 0.3s ease-in-out;
     padding: 20px 20px 20px 20px;
 }
-.projects-box:hover{
+/*.projects-box:hover{
         background: white;
         color: var(--main-color);
         transform: scale (1.03);
-}
+}*/
 .projects-box .projects-info{
     display: flex;
     flex-direction: column;
@@ -450,11 +451,13 @@ span{
     font-size: 4rem;
     font-weight: 500;
     margin-bottom: 1rem;
+    color: var(--bg-color);
 }
 .projects-info h5{
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
+    color: var(--bg-color);
 }
 .projects-info p{
     padding-top: 20px;
@@ -462,4 +465,27 @@ span{
     font-weight: 400;
     max-height: 100px;
     margin: auto;
+    color: var(--bg-color);
 }
+
+.projects-info a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 0.2rem solid var(--bg-color);
+    font-size: 4rem;
+    border-radius: 50%;
+    color: var(--bg-color);
+    margin: 1rem; 
+    transition: 0.3s ease-in-out;
+    padding: 3px;
+}
+
+.projects-info a:hover {
+    color: white;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+
