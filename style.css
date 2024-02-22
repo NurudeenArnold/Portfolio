@@ -13,7 +13,7 @@
     --bg-color: #111111;
     --second-bg-color: #151515;
     --text-color: white;
-    --main-color: #00578a;
+    --main-color: #0083cf;
     /*--main-color: #fd2d2d;
     /*--main-color: #bb5c5c;*/
 }
@@ -41,6 +41,10 @@ body {
 .logo{
     font-size: 3rem;
     color: var( --text-color) fontw 800;
+    /* background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
@@ -89,6 +93,9 @@ span{
 }
 .logo span{
     color: var(--main-color);
+    /* background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 .home-content h3{
     margin-bottom: 2rem;
@@ -484,8 +491,9 @@ span{
 
 .projects-info a:hover {
     color: white;
-    transform: scale(1.1) translateY(-5px);
+    transform: scale(1.5) translateY(-5px);
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
+    border-color: white;
 }
 
