@@ -6,8 +6,11 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins",
-    sans-serif;
+    /* font-family: "Poppins",
+    sans-serif !important; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 :root {
     --bg-color: #111111;
@@ -124,7 +127,7 @@ span{
     width: 22vw;
     border-radius: 50%;
     box-shadow:0 0 25px var(--main-color);
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: 0.4s ease-in-out;
 }
 .home-img img:hover{
@@ -162,7 +165,7 @@ span{
     background: var(--main-color);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: var(--text-color);
+    color: var(--bg-color);
     border: 2px solid transparent;
     letter-spacing: 0.1rem;
     font-weight: 600;
@@ -170,8 +173,9 @@ span{
     cursor: pointer;
 }
 .btn:hover{
-    transform: scale(1.05);
+    transform: scale(1.2);
     box-shadow: 0 0 25px var(--main-color);
+    color: var(--text-color);
 }
 
 /* .text-animation {
@@ -264,7 +268,7 @@ span{
     border-radius: 50%;
     box-shadow:0 0 25px var(--main-color);
     top: 1rem;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: 0.4s ease-in-out;
 }
 .about-img img:hover{
@@ -561,4 +565,5 @@ span{
 
 .contactme-info .btn:hover{
     box-shadow: 0 0 25px var(--bg-color) !important;
+    color: var(--text-color) !important;
 }
