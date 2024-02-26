@@ -505,3 +505,61 @@ span{
 .projects-info h4, .projects-info .h5, .projects-info .p{
     padding: 2rem;
 }
+
+.contactme{
+    background: var(--second-bg-color);
+    color: white;
+}
+.contactme h2{
+    margin-bottom: 5rem;
+    color: white;
+}
+.contactme-container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.contactme-box{
+    background-color: var(--main-color);
+    color: black;
+    height: 50rem;
+    border-radius: 3rem;
+    transition: 0.3s ease-in-out;
+    padding: 5rem;
+}
+.contactme-box .contactme-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 30rem;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+.contactme-info input[type=email], .contactme-info textarea {
+    font-size: 2.5rem;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+}
+
+.contactme-info label {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--bg-color);
+}
+
+.contactme-info .btn{
+    color: var(--main-color) !important;
+    background: white !important; 
+}
+
+.contactme-info button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px white;
+}
