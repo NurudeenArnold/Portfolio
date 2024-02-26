@@ -13,7 +13,7 @@
     --bg-color: #111111;
     --second-bg-color: #151515;
     --text-color: white;
-    --main-color: #0083cf;
+    --main-color: #da6363;
     /*--main-color: #fd2d2d;
     /*--main-color: #bb5c5c;*/
 }
@@ -53,7 +53,7 @@ body {
 }
 .navbar a{
     font-size: 1.8rem;
-    color: white;
+    color: var(--text-color);
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease-in-out;
@@ -151,7 +151,7 @@ span{
     transition: 0.3s ease-in-out;
 }
 .social-icons a:hover{
-    color: white;
+    color: var(--text-color);
     transform: scale (1.3) translateY(-5px);
     box-shadow:0 0 25px var(--main-color);
     background-color: var(--main-color);
@@ -162,7 +162,7 @@ span{
     background: var(--main-color);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: white;
+    color: var(--text-color);
     border: 2px solid transparent;
     letter-spacing: 0.1rem;
     font-weight: 600;
@@ -249,7 +249,7 @@ span{
     align-items: center;
     gap: 10rem;
     background: var(--second-bg-color);
-    color: white;
+    color: var(--text-color);
 }
 .about h2 span{
     color: var(--main-color);
@@ -313,11 +313,11 @@ span{
 }
 .education{
     background: var(--bg-color);
-    color: white;
+    color: var(--text-color);
 }
 .education h2{
     margin-bottom: 5rem;
-    color: white;
+    color: var(--text-color);
 }
 .education-container {
     display: grid;
@@ -327,14 +327,14 @@ span{
 }
 .education-box{
     background-color: var(--main-color);
-    color: black;
+    color: var(--bg-color);
     height: 250px;
     border-radius: 3rem;
     transition: 0.3s ease-in-out;
     padding: 20px 20px 20px 20px;
 }
 .education-box:hover{
-        background: white;
+        background: var(--text-color);
         color: var(--main-color);
         transform: scale (1.03);
 }
@@ -362,11 +362,11 @@ span{
 
 .skills{
     background: var(--second-bg-color);
-    color: white;
+    color: var(--text-color);
 }
 .skills h2{
     margin-bottom: 5rem;
-    color: white;
+    color: var(--text-color);
 }
 .skills-container {
     display: grid;
@@ -378,7 +378,7 @@ span{
 .skills-box{
     position: relative;
     background-color: var(--main-color);
-    color: black;
+    color: var(--bg-color);
     height: 250px;
     border-radius: 3rem;
     transition: 0.3s ease-in-out;
@@ -388,7 +388,7 @@ span{
     text-align: center; 
 }
 .skills-box:hover{
-    background: white;
+    background: var(--text-color);
     color: var(--main-color);
     transform: scale (1.03);
 }
@@ -425,11 +425,11 @@ span{
 
 .projects{
     background: var(--bg-color);
-    color: white;
+    color: var(--text-color);
 }
 .projects h2{
     margin-bottom: 5rem;
-    color: white;
+    color: var(--text-color);
 }
 .projects-container {
     display: grid;
@@ -439,7 +439,7 @@ span{
 }
 .projects-box{
     background-color: var(--main-color);
-    color: black;
+    color: var(--bg-color);
     height: 30rem;
     border-radius: 3rem;
     transition: 0.3s ease-in-out;
@@ -495,11 +495,11 @@ span{
 }
 
 .projects-info a:hover {
-    color: white;
+    color: var(--text-color);
     transform: scale(1.5) translateY(-5px);
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
-    border-color: white;
+    border-color: var(--text-color);
 }
 
 .projects-info h4, .projects-info .h5, .projects-info .p{
@@ -508,11 +508,11 @@ span{
 
 .contactme{
     background: var(--second-bg-color);
-    color: white;
+    color: var(--text-color);
 }
 .contactme h2{
     margin-bottom: 5rem;
-    color: white;
+    color: var(--text-color);
 }
 .contactme-container {
     display: grid;
@@ -522,8 +522,7 @@ span{
 }
 .contactme-box{
     background-color: var(--main-color);
-    color: black;
-    height: 50rem;
+    height: 40rem;
     border-radius: 3rem;
     transition: 0.3s ease-in-out;
     padding: 5rem;
@@ -543,8 +542,9 @@ span{
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 2px solid var(--main-color);
-    border-radius: 4px;
+    border-radius: 4rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .contactme-info label {
@@ -556,10 +556,9 @@ span{
 
 .contactme-info .btn{
     color: var(--main-color) !important;
-    background: white !important; 
+    background: var(--bg-color) !important; 
 }
 
-.contactme-info button:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 25px white;
+.contactme-info .btn:hover{
+    box-shadow: 0 0 25px var(--bg-color) !important;
 }
