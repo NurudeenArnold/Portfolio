@@ -34,7 +34,7 @@ body {
     left: 0;
     width: 100%;
     padding: 3rem 9%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -55,7 +55,7 @@ body {
     transform: scale(1.2);
 }
 .navbar a{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     margin-left: 4rem;
     font-weight: 500;
@@ -478,9 +478,6 @@ span{
 .projects-info p{
     padding-top: 20px;
     font-size: 2.3rem;
-    font-weight: 400;
-    max-height: 100px;
-    margin: auto;
     color: var(--bg-color);
 }
 
