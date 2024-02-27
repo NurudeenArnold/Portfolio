@@ -177,76 +177,6 @@ span{
     box-shadow: 0 0 25px var(--main-color);
     color: var(--text-color);
 }
-
-/* .text-animation {
-    font-size: 34px;
-    font-weight: 600;
-    min-width: 280px;
-}
-
-.text-animation span {
-    position: relative;
-}
-
-.text-animation span::before {
-    content: 'Software Developer';
-    color: var(--main-color);
-    animation: words 20s infinite;
-}
-
-.text-animation span::after {
-    content: "";
-    background-color: var(--bg-color);
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid var(--bg-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-}
-
-@keyframes cursor {
-    to {
-        border-left: 2px solid var(--main-color);
-    }
-}
-
-@keyframes words {
-    0%, 50% {
-        content: 'Software Developer';
-    }
-    51%, 100% {
-        content: "Web Developer";
-    }
-}
-
-@keyframes typing {
-    0%,
-    5%,
-    20%,
-    25%,
-    40%,
-    45%,
-    60%,
-    65%,
-    80%,
-    85%,
-    100% {
-        width: 0;
-    }
-    10%,
-    15%,
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95% {
-        width: calc(100% + 8px);
-    } 
-}*/
 .about{
     display: flex;
     justify-content: center;
@@ -268,7 +198,6 @@ span{
     border-radius: 50%;
     box-shadow:0 0 25px var(--main-color);
     top: 1rem;
-    /* cursor: pointer; */
     transition: 0.4s ease-in-out;
 }
 .about-img img:hover{
@@ -289,22 +218,6 @@ span{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
-/* .about-content .text-animation span::before {
-    content: 'Software Developer';
-    color: var(--main-color);
-    animation: words 20s infinite;
-}
-        
-.about-content .text-animation span::after {
-    content: "";
-    background-color: var(--second-bg-color);
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid var(--second-bg-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-} */
 ::-webkit-scrollbar{
     width: 15px;
     }
@@ -338,9 +251,9 @@ span{
     padding: 20px 20px 20px 20px;
 }
 .education-box:hover{
-        background: var(--text-color);
-        color: var(--main-color);
-        transform: scale (1.03);
+    background: var(--text-color);
+    color: var(--main-color);
+    transform: scale (1.03);
 }
 .education-box .education-info{
     display: flex;
@@ -352,18 +265,17 @@ span{
     padding: 5em;
 }
 .education-info h4{
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
     margin-bottom: 1rem;
 }
 .education-info p{
     padding-top: 20px;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 400;
     max-height: 100px;
     margin: auto;
 }
-
 .skills{
     background: var(--second-bg-color);
     color: var(--text-color);
@@ -449,11 +361,6 @@ span{
     transition: 0.3s ease-in-out;
     padding: 5rem;
 }
-/*.projects-box:hover{
-        background: white;
-        color: var(--main-color);
-        transform: scale (1.03);
-}*/
 .projects-box .projects-info{
     display: flex;
     flex-direction: column;
@@ -464,23 +371,22 @@ span{
     padding: 5em;
 }
 .projects-info h4{
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
     margin-bottom: 1rem;
     color: var(--bg-color);
 }
 .projects-info h5{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1rem;
     color: var(--bg-color);
 }
 .projects-info p{
     padding-top: 20px;
-    font-size: 2.3rem;
+    font-size: 2rem;
     color: var(--bg-color);
 }
-
 .projects-info a {
     display: inline-flex;
     justify-content: center;
@@ -494,7 +400,6 @@ span{
     transition: 0.3s ease-in-out;
     padding: 0.5rem;
 }
-
 .projects-info a:hover {
     color: var(--text-color);
     transform: scale(1.5) translateY(-5px);
@@ -502,11 +407,9 @@ span{
     background-color: var(--main-color);
     border-color: var(--text-color);
 }
-
 .projects-info h4, .projects-info .h5, .projects-info .p{
     padding: 2rem;
 }
-
 .contactme{
     background: var(--second-bg-color);
     color: var(--text-color);
@@ -547,7 +450,6 @@ span{
     background-color: var(--bg-color);
     color: var(--text-color);
 }
-
 .contactme-info label {
     font-size: 3rem;
     font-weight: 500;
