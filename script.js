@@ -23,3 +23,20 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('load', changeActiveNavLink);
     window.addEventListener('scroll', changeActiveNavLink);
 });
+
+function Submit(){
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const dataArray = [];
+
+    const data = {
+        email: email,
+        message: message
+    };
+
+    dataArray.push(data);
+
+    document.querySelector("email").value = "";
+    document.querySelector("message").value = ""; 
+};
+
