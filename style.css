@@ -140,6 +140,8 @@ span{
 }
 .social-icons a{
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     width: 4.5rem;
     height: 4.5rem;
@@ -466,6 +468,9 @@ span{
 
 footer a {
     color: var(--bg-color) !important;
+    border: 0.2rem solid var(--bg-color) !important;
+    width: 3.5rem !important;
+    height: 3.5rem !important;
 }
 
 footer {
