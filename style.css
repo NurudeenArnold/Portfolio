@@ -467,10 +467,8 @@ span{
 }
 
 footer a {
+    font-size: 3.5rem !important;
     color: var(--bg-color) !important;
-    border: 0.2rem solid var(--bg-color) !important;
-    width: 3.5rem !important;
-    height: 3.5rem !important;
 }
 
 footer {
