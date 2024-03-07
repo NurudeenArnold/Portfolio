@@ -43,11 +43,10 @@ body {
 }
 .logo{
     font-size: 3rem;
-    color: var( --text-color) fontw 800;
+    color: var( --text-color);
     /* background-image: linear-gradient(45deg, #f3ec78, #af4261);
     background-clip: text;
     -webkit-text-fill-color: transparent; */
-
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
@@ -141,21 +140,19 @@ span{
 }
 .social-icons a{
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     width: 4.5rem;
     height: 4.5rem;
-    background: transparent;
     border: 0.2rem solid var(--main-color);
     font-size: 2.5rem;
     border-radius: 50%;
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 3rem 1rem 3rem 1rem;
     transition: 0.3s ease-in-out;
 }
 .social-icons a:hover{
     color: var(--text-color);
-    transform: scale (1.3) translateY(-5px);
+    transform: scale(1.3) translateY(-5px);
     box-shadow:0 0 25px var(--main-color);
     background-color: var(--main-color);
 }
@@ -253,7 +250,7 @@ span{
 .education-box:hover{
     background: var(--text-color);
     color: var(--main-color);
-    transform: scale (1.03);
+    transform: scale(1.03);
 }
 .education-box .education-info{
     display: flex;
@@ -306,7 +303,7 @@ span{
 .skills-box:hover{
     background: var(--text-color);
     color: var(--main-color);
-    transform: scale (1.03);
+    transform: scale(1.03);
 }
 .skills-box .skills-info{
     position: relative; 
@@ -465,4 +462,16 @@ span{
 .contactme-info .btn:hover{
     box-shadow: 0 0 25px var(--bg-color) !important;
     color: var(--text-color) !important;
+}
+
+footer a {
+    color: var(--bg-color) !important;
+}
+
+footer {
+    background-color: var(--main-color);
+}
+
+footer .social-icons {
+    text-align: center;
 }
