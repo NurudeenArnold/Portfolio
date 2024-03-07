@@ -264,7 +264,7 @@ span{
     padding: 5em;
 }
 .education-info h4{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
 }
@@ -479,4 +479,28 @@ footer {
 
 footer .social-icons {
     text-align: center;
+}
+
+@media only screen and (max-width: 1400px) {
+    /* .skills-info a {
+        font-size: 100px;
+    }  */
+    .skills-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media only screen and (max-width: 1220px) {
+    .education-info h4{
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    .education-info p{
+        padding-top: 20px;
+        font-size: 1.7rem;
+        font-weight: 400;
+        max-height: 100px;
+        margin: auto;
+    }
 }
