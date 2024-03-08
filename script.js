@@ -24,19 +24,26 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', changeActiveNavLink);
 });
 
-function Submit(){
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const dataArray = [];
+var contactMeForm = document.getElementById("contactMeForm");
+contactMeForm.addEventListener("submit", function(event){
+    event.preventDefault()
 
-    const data = {
-        email: email,
-        message: message
-    };
+    var email = document.getElementById("email").value;
+    console.log(email);
+    var message = document.getElementById("message").value;
+    console.log(message);
 
-    dataArray.push(data);
+    Swal.fire({
+        title: "Thank you!",
+        text: "I will be in contact with you soon.",
+        color: "var(--text-color)",
+        icon: "success",
+        confirmButtonColor: "var(--main-color)",
+        iconColor: "var(--main-color)",
+        confirmButtonText: "Okay",
+        background: "var(--bg-color)"
+    });
 
-    document.querySelector("email").value = "";
-    document.querySelector("message").value = ""; 
-};
-
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+});
