@@ -172,7 +172,7 @@ span{
     cursor: pointer;
 }
 .btn:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     box-shadow: 0 0 25px var(--main-color);
     color: var(--text-color);
 }
@@ -240,6 +240,7 @@ span{
     grid-template-columns: repeat(3,1fr);
     align-items: center;
     gap: 2.5rem;
+    justify-content: center;
 }
 .education-box{
     background-color: var(--main-color);
@@ -258,10 +259,10 @@ span{
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-height: 200px;
+    height: auto;
     justify-content: center;
     align-items: center;
-    padding: 5em;
+    padding: 3rem;
 }
 .education-info h4{
     font-size: 2.5rem;
@@ -272,29 +273,27 @@ span{
     padding-top: 20px;
     font-size: 2rem;
     font-weight: 400;
-    max-height: 100px;
     margin: auto;
 }
 .skills{
     background: var(--second-bg-color);
     color: var(--text-color);
 }
-.skills h2{
-    margin-bottom: 5rem;
-    color: var(--text-color);
-}
 .skills-container {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     align-items: center;
+    flex-wrap: wrap;
     gap: 2.5rem;
-    padding: 30px;
+    padding: 3rem;
+    justify-content: center;
 }
 .skills-box{
     position: relative;
     background-color: var(--main-color);
     color: var(--bg-color);
-    height: 250px;
+    height: fit-content;
+    padding: 5rem;
     border-radius: 3rem;
     transition: 0.3s ease-in-out;
     display: flex; 
@@ -313,23 +312,12 @@ span{
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-height: 200px;
+    height: auto;
     justify-content: center;
     align-items: center;
     padding: 5em;
 }
-.skills-info h4{
-    font-size: 4rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
-.skills-info p{
-    padding-top: 20px;
-    font-size: 2.3rem;
-    font-weight: 400;
-    max-height: 100px;
-    margin: auto;
-}
+
 .skills-info a{
     font-size: 150px;
     position: absolute;
@@ -355,19 +343,18 @@ span{
 .projects-box{
     background-color: var(--main-color);
     color: var(--bg-color);
-    height: 30rem;
+    height: auto;
     border-radius: 3rem;
     transition: 0.3s ease-in-out;
-    padding: 5rem;
+    padding: 3rem;
 }
 .projects-box .projects-info{
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-height: 20rem;
+    height: auto;
     justify-content: center;
     align-items: center;
-    padding: 5em;
 }
 .projects-info h4{
     font-size: 3rem;
@@ -425,21 +412,19 @@ span{
 }
 .contactme-box{
     background-color: var(--main-color);
-    height: 40rem;
+    height: auto;
     border-radius: 3rem;
     transition: 0.3s ease-in-out;
-    padding: 5rem;
+    padding: 3rem;
 }
 .contactme-box .contactme-info{
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-height: 30rem;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
 }
-.contactme-info input[type=email], .contactme-info textarea {
+.contactme-info input, .contactme-info textarea {
     font-size: 2.5rem;
     width: 100%;
     padding: 12px 20px;
