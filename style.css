@@ -244,7 +244,7 @@ span{
 .education-box{
     background-color: var(--main-color);
     color: var(--bg-color);
-    height: fit-content;
+    height: 250px;
     border-radius: 3rem;
     transition: 0.3s ease-in-out;
     padding: 2rem;
@@ -490,6 +490,9 @@ footer .social-icons {
     }
 }
 @media only screen and (max-width: 950px) {
+    html {
+        font-size: 50%;
+    }
     #menu-icon{
         display: block;
     }
@@ -547,6 +550,25 @@ footer .social-icons {
         width: 20vw;
     }
     .education-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .education-box{
+        height: fit-content;
+    }
+    .skills-info a{
+        font-size: 15rem;
+    }
+    .skills-container{
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .skills-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width: 400px) {
+    .skills-container{
         grid-template-columns: repeat(1,1fr);
     }
 }
