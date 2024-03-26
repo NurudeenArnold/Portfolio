@@ -274,6 +274,9 @@ span{
     font-weight: 400;
     margin: auto;
 }
+.skills h2{
+    margin-bottom: 5rem;
+}
 .skills{
     background: var(--second-bg-color);
     color: var(--text-color);
@@ -497,7 +500,7 @@ footer .social-icons {
         display: block;
     }
     .navbar{
-        position: absolute;
+        position: fixed;
         top: 100%;
         right: 0;
         width: 50%;
@@ -531,7 +534,7 @@ footer .social-icons {
         font-size: 2.6rem;
     }
     .home-content h1{
-        font-size: 8rem;
+        font-size: 6rem;
         margin-top: 3rem;
     }
     .home-content p{
@@ -563,12 +566,15 @@ footer .social-icons {
     }
 }
 @media only screen and (max-width: 550px) {
+    html {
+        font-size: 40%;
+    }
     .skills-container{
         grid-template-columns: repeat(2,1fr);
     }
 }
 @media only screen and (max-width: 400px) {
-    .skills-container{
-        grid-template-columns: repeat(1,1fr);
+    html {
+        font-size: 40%;
     }
 }
