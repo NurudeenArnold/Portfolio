@@ -283,7 +283,7 @@ span{
 }
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(5,1fr);
     align-items: center;
     flex-wrap: wrap;
     gap: 2.5rem;
@@ -381,12 +381,26 @@ span{
     align-items: center;
     background: transparent;
     border: 0.2rem solid var(--bg-color);
-    font-size: 4rem;
+    font-size: 2.5rem;
     border-radius: 50%;
     color: var(--bg-color);
     margin: 1rem; 
     transition: 0.3s ease-in-out;
     padding: 0.5rem;
+}
+.projects-info box-icon{
+    font-size: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem; 
+    height: 4rem; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    transition: 0.3s ease-in-out;
+}
+.projects-info .icons-container {
+    display: flex;
 }
 .projects-info a:hover {
     color: var(--text-color);
@@ -394,6 +408,10 @@ span{
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
     border-color: var(--text-color);
+}
+.projects-info box-icon:hover {
+    color: var(--text-color);
+    background-color: var(--text-color);
 }
 .projects-info h4, .projects-info .h5, .projects-info .p{
     padding: 2rem;
