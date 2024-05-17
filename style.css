@@ -381,7 +381,7 @@ span{
     align-items: center;
     background: transparent;
     border: 0.2rem solid var(--bg-color);
-    font-size: 2.5rem;
+    font-size: 3rem;
     border-radius: 50%;
     color: var(--bg-color);
     margin: 1rem; 
