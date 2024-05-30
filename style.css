@@ -564,6 +564,11 @@ footer .social-icons {
         margin: auto;
     }
 }
+@media only screen and (max-width: 1080px) {
+    html {
+        font-size: 50%;
+    }
+}
 @media only screen and (max-width: 950px) {
     html {
         font-size: 50%;
