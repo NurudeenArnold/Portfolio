@@ -205,6 +205,10 @@ span{
     text-align: center;
     font-size: 8rem;
 }
+.previewheading{
+    text-align: center;
+    font-size: 5rem;
+}
 .about-content h2{
     text-align: left;
     line-height: 1.5;
@@ -274,11 +278,59 @@ span{
     font-weight: 400;
     margin: auto;
 }
+
+.experience{
+    background: var(--second-bg-color);
+    color: var(--text-color);
+}
+.experience h2{
+    margin-bottom: 5rem;
+    color: var(--text-color);
+}
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.experience-box{
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    height: auto;
+    border-radius: 3rem;
+    transition: 0.3s ease-in-out;
+    padding: 3rem;
+}
+.experience-box .experience-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.experience-info h4{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    color: var(--bg-color);
+}
+.experience-info h5{
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--bg-color);
+}
+.experience-info p{
+    font-size: 2rem;
+    color: var(--bg-color);
+}
+
 .skills h2{
     margin-bottom: 5rem;
 }
 .skills{
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     color: var(--text-color);
 }
 .skills-container {
@@ -329,7 +381,7 @@ span{
 }
 
 .projects{
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     color: var(--text-color);
 }
 .projects h2{
@@ -417,7 +469,7 @@ span{
     padding: 2rem;
 }
 .contactme{
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     color: var(--text-color);
 }
 .contactme h2{
@@ -486,6 +538,11 @@ footer .social-icons {
 
 .swal2-popup {
     font-size: 1.5rem !important;
+}
+.preview{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
 }
 @media only screen and (max-width: 1400px) {
     .skills-container{
