@@ -294,37 +294,38 @@ span{
     gap: 2.5rem;
 }
 .experience-box{
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    height: auto;
-    border-radius: 3rem;
-    transition: 0.3s ease-in-out;
-    padding: 3rem;
-}
+        background-color: var(--main-color);
+        color: var(--bg-color);
+        height: 250px;
+        border-radius: 3rem;
+        transition: 0.3s ease-in-out;
+        padding: 2rem;
+    }
+.experience-box:hover{
+        background: var(--text-color);
+        color: var(--main-color);
+        transform: scale(1.03);
+    }
 .experience-box .experience-info{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-}
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+    }
 .experience-info h4{
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    font-weight: 500;
-    color: var(--bg-color);
-}
-.experience-info h5{
-    font-size: 2.4rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-    color: var(--bg-color);
-}
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
 .experience-info p{
-    font-size: 2rem;
-    color: var(--bg-color);
-}
+        padding-top: 20px;
+        font-size: 2rem;
+        font-weight: 400;
+        margin: auto;
+    }
 
 .skills h2{
     margin-bottom: 5rem;
