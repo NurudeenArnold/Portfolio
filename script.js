@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', changeActiveNavLink);
 });
 
-var contactMeForm = document.getElementById("contactMeForm");
+/* var contactMeForm = document.getElementById("contactMeForm");
 contactMeForm.addEventListener("submit", function(event){
     event.preventDefault()
 
@@ -75,7 +75,7 @@ contactMeForm.addEventListener("submit", function(event){
     document.getElementById("fullName").value = "";
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
-});
+}); */
 
 function DisplayError(error) {
     //Display Error Method
