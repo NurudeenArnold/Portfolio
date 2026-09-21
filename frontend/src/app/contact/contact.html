@@ -1,27 +1,12 @@
-<form [formGroup]="form" (ngSubmit)="submit()" class="contact-form">
-  <label>
-    Name
-    <input type="text" formControlName="name" />
-  </label>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <label for="fullName">Full Name:</label><br>
+    <input type="text" id="fullName" formControlName="name" placeholder="Nurudeen Arnold" required><br><br>
 
-  <label>
-    Email
-    <input type="email" formControlName="email" />
-  </label>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" formControlName="email" placeholder="example@gmail.com" required><br><br>
 
-  <label>
-    Message
-    <textarea formControlName="message" rows="5"></textarea>
-  </label>
+    <label for="message">Message:</label><br>
+    <textarea id="message" formControlName="message" rows="4" cols="50" required></textarea><br><br>
 
-  <button type="submit" [disabled]="status() === 'sending'">
-    {{ status() === 'sending' ? 'Sending…' : 'Send' }}
-  </button>
-
-  @if (status() === 'sent') {
-    <p class="success">Thanks! Your message has been sent.</p>
-  }
-  @if (status() === 'error') {
-    <p class="error">Something went wrong — please try again.</p>
-  }
+    <input class="btn" type="submit" [value]="sending() ? 'Sending…' : 'Submit'" [disabled]="sending()">
 </form>
