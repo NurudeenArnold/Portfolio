@@ -4,7 +4,10 @@ import { environment } from '../../environments/environment';
 export interface ContactMessage {
   name: string;
   email: string;
+  reason: string;
+  otherReason?: string;
   message: string;
+  honeypot?: string;
 }
 
 @Injectable({ providedIn: 'root' })

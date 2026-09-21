@@ -1,12 +1,77 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
     <label for="fullName">Full Name:</label><br>
-    <input type="text" id="fullName" formControlName="name" placeholder="Nurudeen Arnold" required><br><br>
+    <input type="text" id="fullName" formControlName="name" placeholder="Nurudeen Arnold" required><br>
+    @if (form.controls.name.invalid && form.controls.name.touched) {
+        <p class="field-error">
+            @if (form.controls.name.hasError('required')) {
+                Full name is required.
+            } @else if (form.controls.name.hasError('maxlength')) {
+                Full name must be 100 characters or fewer.
+            }
+        </p>
+    }
+    <br>
 
     <label for="email">Email:</label><br>
-    <input type="email" id="email" formControlName="email" placeholder="example@gmail.com" required><br><br>
+    <input type="email" id="email" formControlName="email" placeholder="example@gmail.com" required><br>
+    @if (form.controls.email.invalid && form.controls.email.touched) {
+        <p class="field-error">
+            @if (form.controls.email.hasError('required')) {
+                Email is required.
+            } @else if (form.controls.email.hasError('email')) {
+                Enter a valid email address.
+            } @else if (form.controls.email.hasError('maxlength')) {
+                Email must be 200 characters or fewer.
+            }
+        </p>
+    }
+    <br>
+
+    <label for="reason">Reason for reaching out:</label><br>
+    <select id="reason" formControlName="reason" (change)="onReasonChange()" required>
+        <option value="" disabled selected>Select a reason</option>
+        <option value="job">Job opportunity</option>
+        <option value="collaboration">Collaboration</option>
+        <option value="hi">Just saying hi</option>
+        <option value="other">Other</option>
+    </select><br>
+    @if (form.controls.reason.invalid && form.controls.reason.touched) {
+        <p class="field-error">Please select a reason.</p>
+    }
+    <br>
+
+    @if (showOtherReason()) {
+        <label for="otherReason">Please specify:</label><br>
+        <input type="text" id="otherReason" formControlName="otherReason" placeholder="Tell me more" required><br>
+        @if (form.controls.otherReason.invalid && form.controls.otherReason.touched) {
+            <p class="field-error">
+                @if (form.controls.otherReason.hasError('required')) {
+                    Please specify a reason.
+                } @else if (form.controls.otherReason.hasError('maxlength')) {
+                    Please keep this under 200 characters.
+                }
+            </p>
+        }
+        <br>
+    }
 
     <label for="message">Message:</label><br>
-    <textarea id="message" formControlName="message" rows="4" cols="50" required></textarea><br><br>
+    <textarea id="message" formControlName="message" rows="4" cols="50" required></textarea><br>
+    @if (form.controls.message.invalid && form.controls.message.touched) {
+        <p class="field-error">
+            @if (form.controls.message.hasError('required')) {
+                Message is required.
+            } @else if (form.controls.message.hasError('maxlength')) {
+                Message must be 2000 characters or fewer.
+            }
+        </p>
+    }
+    <br>
+
+    <div class="honeypot" aria-hidden="true">
+        <label for="website">Website</label>
+        <input type="text" id="website" formControlName="honeypot" tabindex="-1" autocomplete="off">
+    </div>
 
     <input class="btn" type="submit" [value]="sending() ? 'Sending…' : 'Submit'" [disabled]="sending()">
 </form>

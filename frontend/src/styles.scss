@@ -497,7 +497,7 @@ span{
     justify-content: center;
     align-items: center;
 }
-.contactme-info input, .contactme-info textarea {
+.contactme-info input, .contactme-info textarea, .contactme-info select {
     font-size: 2.5rem;
     width: 100%;
     padding: 12px 20px;
@@ -507,11 +507,35 @@ span{
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+.contactme-info select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 4.5rem;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23649ccf' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    background-size: 2rem;
+}
 .contactme-info label {
     font-size: 3rem;
     font-weight: 500;
     margin-bottom: 1rem;
     color: var(--bg-color);
+}
+.contactme-info .field-error {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #b3001b;
+    margin: 0.3rem 0 0;
+}
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .contactme-info .btn{

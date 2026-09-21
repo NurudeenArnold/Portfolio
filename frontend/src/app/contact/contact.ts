@@ -11,6 +11,7 @@ import { ContactService } from './contact.service';
 })
 export class Contact {
   sending = signal(false);
+  showOtherReason = signal(false);
   form!: ReturnType<Contact['buildForm']>;
 
   constructor(
@@ -22,10 +23,29 @@ export class Contact {
 
   private buildForm() {
     return this.fb.nonNullable.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required],
+      name: ['', [Validators.required, Validators.maxLength(100)]],
+      email: ['', [Validators.required, Validators.email, Validators.maxLength(200)]],
+      reason: ['', Validators.required],
+      otherReason: ['', Validators.maxLength(200)],
+      message: ['', [Validators.required, Validators.maxLength(2000)]],
+      // Hidden from real visitors; only bots blindly filling every field
+      // populate this. See contact.scss and backend/api/contact.ts.
+      honeypot: [''],
     });
+  }
+
+  onReasonChange(): void {
+    const isOther = this.form.controls.reason.value === 'other';
+    this.showOtherReason.set(isOther);
+
+    const otherReasonControl = this.form.controls.otherReason;
+    otherReasonControl.setValidators(
+      isOther ? [Validators.required, Validators.maxLength(200)] : Validators.maxLength(200),
+    );
+    if (!isOther) {
+      otherReasonControl.setValue('');
+    }
+    otherReasonControl.updateValueAndValidity();
   }
 
   async submit(): Promise<void> {
@@ -38,9 +58,10 @@ export class Contact {
     try {
       await this.contactService.send(this.form.getRawValue());
       this.form.reset();
+      this.showOtherReason.set(false);
       Swal.fire({
         title: 'Thank you!',
-        text: 'I will be in contact with you soon.',
+        text: "I'll get back to you within a few days.",
         color: 'var(--text-color)',
         icon: 'success',
         confirmButtonColor: 'var(--main-color)',
