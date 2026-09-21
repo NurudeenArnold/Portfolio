@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { getFirestore } from 'firebase-admin/firestore';
 import { adminApp } from '../lib/firebase-admin';
+import { getClientIp, isRateLimited } from '../lib/rate-limit';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -9,6 +10,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   if (req.method === 'OPTIONS') {
     res.status(204).end();
+    return;
+  }
+
+  const ip = getClientIp(req);
+  if (await isRateLimited(`register-token_${ip}`, 10)) {
+    res.status(429).json({ error: 'Too many requests. Please try again in a minute.' });
     return;
   }
 

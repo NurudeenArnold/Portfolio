@@ -13,5 +13,9 @@ service cloud.firestore {
     match /deviceTokens/{tokenId} {
       allow read, write: if false;
     }
+
+    match /rateLimits/{key} {
+      allow read, write: if false;
+    }
   }
 }

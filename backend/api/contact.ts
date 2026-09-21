@@ -2,6 +2,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { getFirestore } from 'firebase-admin/firestore';
 import { getMessaging } from 'firebase-admin/messaging';
 import { adminApp } from '../lib/firebase-admin';
+import { getClientIp, isRateLimited } from '../lib/rate-limit';
 
 const REASONS = ['job', 'collaboration', 'hi', 'other'] as const;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -33,6 +34,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
+    return;
+  }
+
+  const ip = getClientIp(req);
+  if (await isRateLimited(`contact_${ip}`, 5)) {
+    res.status(429).json({ error: 'Too many requests. Please try again in a minute.' });
     return;
   }
 
