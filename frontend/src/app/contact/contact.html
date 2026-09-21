@@ -1,6 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
     <div class="field">
-        <label for="fullName">Full Name</label>
+        <label for="fullName">Full Name <span class="required-mark">*</span></label>
         <input type="text" id="fullName" formControlName="name" placeholder="Nurudeen Arnold" required>
         @if (form.controls.name.invalid && form.controls.name.touched) {
             <p class="field-error">
@@ -14,7 +14,7 @@
     </div>
 
     <div class="field">
-        <label for="email">Email</label>
+        <label for="email">Email <span class="required-mark">*</span></label>
         <input type="email" id="email" formControlName="email" placeholder="example@gmail.com" required>
         @if (form.controls.email.invalid && form.controls.email.touched) {
             <p class="field-error">
@@ -30,7 +30,7 @@
     </div>
 
     <div class="field">
-        <label for="reason">Reason for reaching out</label>
+        <label for="reason">Reason for reaching out <span class="required-mark">*</span></label>
         <select id="reason" formControlName="reason" (change)="onReasonChange()" required>
             <option value="" disabled selected>Select a reason</option>
             <option value="job">Job opportunity</option>
@@ -45,7 +45,7 @@
 
     @if (showOtherReason()) {
         <div class="field">
-            <label for="otherReason">Please specify</label>
+            <label for="otherReason">Please specify <span class="required-mark">*</span></label>
             <input type="text" id="otherReason" formControlName="otherReason" placeholder="Tell me more" required>
             @if (form.controls.otherReason.invalid && form.controls.otherReason.touched) {
                 <p class="field-error">
@@ -61,15 +61,10 @@
 
     <div class="field">
         <label for="message">Message</label>
-        <textarea id="message" formControlName="message" rows="4" placeholder="What would you like to say?" required></textarea>
+        <textarea id="message" formControlName="message" rows="4" placeholder="What would you like to say?" [maxlength]="messageMaxLength"></textarea>
+        <p class="char-counter">{{ form.controls.message.value.length }}/{{ messageMaxLength }}</p>
         @if (form.controls.message.invalid && form.controls.message.touched) {
-            <p class="field-error">
-                @if (form.controls.message.hasError('required')) {
-                    Message is required.
-                } @else if (form.controls.message.hasError('maxlength')) {
-                    Message must be 2000 characters or fewer.
-                }
-            </p>
+            <p class="field-error">Message must be {{ messageMaxLength }} characters or fewer.</p>
         }
     </div>
 

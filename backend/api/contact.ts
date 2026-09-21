@@ -17,6 +17,10 @@ function isNonEmptyString(value: unknown, maxLength: number): value is string {
   return typeof value === 'string' && value.trim().length > 0 && value.length <= maxLength;
 }
 
+function isValidOptionalString(value: unknown, maxLength: number): boolean {
+  return value === undefined || value === null || (typeof value === 'string' && value.length <= maxLength);
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -62,12 +66,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return;
   }
 
-  if (!isNonEmptyString(message, LIMITS.message)) {
-    res.status(400).json({ error: `message is required and must be ${LIMITS.message} characters or fewer` });
+  if (!isValidOptionalString(message, LIMITS.message)) {
+    res.status(400).json({ error: `message must be ${LIMITS.message} characters or fewer` });
     return;
   }
 
   const resolvedReason = reason === 'other' ? (otherReason as string).trim() : reason;
+  const resolvedMessage = typeof message === 'string' ? message.trim() : '';
 
   const db = getFirestore(adminApp);
 
@@ -75,7 +80,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     name: (name as string).trim(),
     email: (email as string).trim(),
     reason: resolvedReason,
-    message: (message as string).trim(),
+    message: resolvedMessage,
     createdAt: new Date(),
   });
 
@@ -87,7 +92,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       tokens,
       notification: {
         title: 'New portfolio contact message',
-        body: `${name} (${resolvedReason}): ${message}`,
+        body: resolvedMessage
+          ? `${name} (${resolvedReason}): ${resolvedMessage}`
+          : `${name} (${resolvedReason}) reached out`,
       },
       data: { messageId: docRef.id },
     });

@@ -10,6 +10,8 @@ import { ContactService } from './contact.service';
   styleUrl: './contact.scss',
 })
 export class Contact {
+  readonly messageMaxLength = 2000;
+
   sending = signal(false);
   showOtherReason = signal(false);
   form!: ReturnType<Contact['buildForm']>;
@@ -27,7 +29,7 @@ export class Contact {
       email: ['', [Validators.required, Validators.email, Validators.maxLength(200)]],
       reason: ['', Validators.required],
       otherReason: ['', Validators.maxLength(200)],
-      message: ['', [Validators.required, Validators.maxLength(2000)]],
+      message: ['', Validators.maxLength(2000)],
       // Hidden from real visitors; only bots blindly filling every field
       // populate this. See contact.scss and backend/api/contact.ts.
       honeypot: [''],
