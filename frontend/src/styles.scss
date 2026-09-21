@@ -296,7 +296,7 @@ span{
 .experience-box{
         background-color: var(--main-color);
         color: var(--bg-color);
-        height: 250px;
+        height: auto;
         border-radius: 3rem;
         transition: 0.3s ease-in-out;
         padding: 2rem;
@@ -326,9 +326,84 @@ span{
         font-weight: 400;
         margin: auto;
     }
+.experience-bullets{
+        text-align: left;
+        max-width: 700px;
+        margin: 2rem auto 0;
+        padding-left: 2rem;
+        list-style: disc;
+    }
+.experience-bullets li{
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+.certifications{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.certifications h2{
+    margin-bottom: 5rem;
+    color: var(--text-color);
+}
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.certifications-box{
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    height: auto;
+    border-radius: 3rem;
+    transition: 0.3s ease-in-out;
+    padding: 2rem;
+}
+.certifications-box:hover{
+    background: var(--text-color);
+    color: var(--main-color);
+    transform: scale(1.03);
+}
+.certifications-box .certifications-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+.certifications-info h4{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.certifications-info p{
+    padding-top: 20px;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: auto;
+}
+.certifications-info .certifications-desc{
+    max-width: 700px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    padding-top: 2rem;
+}
 
 .skills h2{
     margin-bottom: 5rem;
+}
+.skills-group-heading{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--main-color);
+    text-align: center;
+    margin: 3rem 0 2rem;
 }
 .skills{
     background: var(--bg-color);
@@ -497,17 +572,37 @@ span{
     justify-content: center;
     align-items: center;
 }
-.contactme-info input, .contactme-info textarea, .contactme-info select {
-    font-size: 2.5rem;
+app-home, app-about, app-education, app-certifications, app-experience, app-skills, app-projects, app-contact {
+    display: block;
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+}
+.contactme-info .field {
+    width: 100%;
+    margin: 1.2rem 0;
+    text-align: left;
+}
+.contactme-info .field label {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: var(--bg-color);
+}
+.contactme-info .field input,
+.contactme-info .field textarea,
+.contactme-info .field select {
+    font-size: 2.2rem;
+    width: 100%;
+    padding: 1.2rem 1.8rem;
     box-sizing: border-box;
-    border-radius: 4rem;
+    border-radius: 3rem;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
-.contactme-info select {
+.contactme-info .field textarea {
+    border-radius: 1.5rem;
+}
+.contactme-info .field select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -516,19 +611,20 @@ span{
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23649ccf' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1.5rem center;
-    background-size: 2rem;
+    background-size: 1.8rem;
 }
-.contactme-info label {
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    color: var(--bg-color);
+.contactme-info .field select:invalid {
+    color: rgba(255, 255, 255, 0.5);
 }
 .contactme-info .field-error {
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: #b3001b;
-    margin: 0.3rem 0 0;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ff6b6b;
+    background-color: var(--bg-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: 1.5rem;
+    margin: 0.5rem 0 0;
 }
 .honeypot {
     position: absolute;
