@@ -133,7 +133,7 @@ span{
                 0 0 100px var(--main-color);
 }
 .home-content p{
-    font-size: 1.5rem;
+    font-size: clamp(14px, 1.5rem, 15px);
     font-weight: 500;
     max-width: 1000px;
 }
@@ -217,7 +217,7 @@ span{
     font-size: 2.6rem;
 }
 .about-content p{
-    font-size: 1.6rem;
+    font-size: clamp(14px, 1.6rem, 16px);
     margin: 2rem 0 3rem;
 }
 ::-webkit-scrollbar{
@@ -268,13 +268,13 @@ span{
     padding: 3rem;
 }
 .education-info h4{
-    font-size: 2.5rem;
+    font-size: clamp(17px, 2.5rem, 25px);
     font-weight: 500;
     margin-bottom: 1rem;
 }
 .education-info p{
     padding-top: 20px;
-    font-size: 2rem;
+    font-size: clamp(14px, 2rem, 20px);
     font-weight: 400;
     margin: auto;
 }
@@ -316,13 +316,13 @@ span{
         padding: 3rem;
     }
 .experience-info h4{
-        font-size: 2.5rem;
+        font-size: clamp(17px, 2.5rem, 25px);
         font-weight: 500;
         margin-bottom: 1rem;
     }
 .experience-info p{
         padding-top: 20px;
-        font-size: 2rem;
+        font-size: clamp(14px, 2rem, 20px);
         font-weight: 400;
         margin: auto;
     }
@@ -334,7 +334,7 @@ span{
         list-style: disc;
     }
 .experience-bullets li{
-        font-size: 1.6rem;
+        font-size: clamp(14px, 1.6rem, 16px);
         font-weight: 400;
         line-height: 1.6;
         margin-bottom: 1rem;
@@ -377,13 +377,13 @@ span{
     padding: 3rem;
 }
 .certifications-info h4{
-    font-size: 2.5rem;
+    font-size: clamp(17px, 2.5rem, 25px);
     font-weight: 500;
     margin-bottom: 1rem;
 }
 .certifications-info p{
     padding-top: 20px;
-    font-size: 2rem;
+    font-size: clamp(14px, 2rem, 20px);
     font-weight: 400;
     margin: auto;
 }
@@ -392,7 +392,7 @@ span{
     margin-bottom: 5rem;
 }
 .skills-group-heading{
-    font-size: 2.4rem;
+    font-size: clamp(17px, 2.4rem, 24px);
     font-weight: 600;
     color: var(--main-color);
     text-align: center;
@@ -486,14 +486,14 @@ span{
     color: var(--bg-color);
 }
 .projects-info h5{
-    font-size: 2rem;
+    font-size: clamp(14px, 2rem, 20px);
     font-weight: 500;
     margin-bottom: 1rem;
     color: var(--bg-color);
 }
 .projects-info p{
     padding-top: 20px;
-    font-size: 2rem;
+    font-size: clamp(14px, 2rem, 20px);
     color: var(--bg-color);
 }
 .projects-info a {
@@ -576,7 +576,7 @@ app-home, app-about, app-education, app-certifications, app-experience, app-skil
 }
 .contactme-info .field label {
     display: block;
-    font-size: 1.8rem;
+    font-size: clamp(15px, 1.8rem, 18px);
     font-weight: 600;
     margin-bottom: 0.6rem;
     color: var(--bg-color);
@@ -584,7 +584,7 @@ app-home, app-about, app-education, app-certifications, app-experience, app-skil
 .contactme-info .field input,
 .contactme-info .field textarea,
 .contactme-info .field select {
-    font-size: 2.2rem;
+    font-size: clamp(16px, 2.2rem, 22px);
     width: 100%;
     padding: 1.2rem 1.8rem;
     box-sizing: border-box;
@@ -611,7 +611,7 @@ app-home, app-about, app-education, app-certifications, app-experience, app-skil
 }
 .contactme-info .field-error {
     display: inline-block;
-    font-size: 1.6rem;
+    font-size: clamp(14px, 1.6rem, 16px);
     font-weight: 600;
     color: #ff6b6b;
     background-color: var(--bg-color);
@@ -623,7 +623,7 @@ app-home, app-about, app-education, app-certifications, app-experience, app-skil
     color: var(--bg-color);
 }
 .contactme-info .char-counter {
-    font-size: 1.4rem;
+    font-size: clamp(13px, 1.4rem, 14px);
     font-weight: 500;
     color: var(--bg-color);
     text-align: right;
@@ -676,13 +676,13 @@ footer .social-icons {
 
 @media only screen and (max-width: 1220px) {
     .education-info h4{
-        font-size: 2.3rem;
+        font-size: clamp(16px, 2.3rem, 23px);
         font-weight: 500;
         margin-bottom: 1rem;
     }
     .education-info p{
         padding-top: 20px;
-        font-size: 1.7rem;
+        font-size: clamp(14px, 1.7rem, 17px);
         font-weight: 400;
         max-height: 100px;
         margin: auto;
@@ -723,7 +723,7 @@ footer .social-icons {
     }
     .navbar a{
         display: block;
-        font-size: 2rem;
+        font-size: clamp(16px, 2rem, 20px);
         margin: 3rem 0;
         color: white;
     }
