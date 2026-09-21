@@ -748,10 +748,13 @@ footer .social-icons {
     }
     .about{
         flex-direction: column;
-        gap: 5rem;
+        gap: 3rem;
+    }
+    .about-img{
+        order: -1;
     }
     .about img{
-        width: 20vw;
+        width: 30vw;
     }
     .education-container{
         grid-template-columns: repeat(1,1fr);
