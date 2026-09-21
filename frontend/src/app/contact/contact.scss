@@ -1,0 +1,14 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 480px;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: crimson;
+}
