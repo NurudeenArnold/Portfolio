@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { firestore } from '../core/firebase';
+import { environment } from '../../environments/environment';
 
 export interface ContactMessage {
   name: string;
@@ -11,9 +10,14 @@ export interface ContactMessage {
 @Injectable({ providedIn: 'root' })
 export class ContactService {
   async send(payload: ContactMessage): Promise<void> {
-    await addDoc(collection(firestore, 'contactMessages'), {
-      ...payload,
-      createdAt: serverTimestamp(),
+    const response = await fetch(`${environment.apiBaseUrl}/api/contact`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
     });
+
+    if (!response.ok) {
+      throw new Error(`Contact request failed with status ${response.status}`);
+    }
   }
 }

@@ -3,20 +3,13 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Public contact form: anyone can submit a message, nobody can read,
-    // update, or delete them from the client. Reading happens via the
-    // Cloud Function / Firebase console only.
+    // All reads/writes go through the Vercel API using the Firebase Admin
+    // SDK, which bypasses these rules entirely. No client (web or app)
+    // talks to Firestore directly, so both collections stay fully closed.
     match /contactMessages/{messageId} {
-      allow create: if request.resource.data.keys().hasAll(['name', 'email', 'message'])
-                    && request.resource.data.name is string
-                    && request.resource.data.email is string
-                    && request.resource.data.message is string;
-      allow read, update, delete: if false;
+      allow read, write: if false;
     }
 
-    // FCM device tokens for the companion Android app. Not writable from
-    // the public web client — register tokens via an authenticated admin
-    // flow or the Firebase console.
     match /deviceTokens/{tokenId} {
       allow read, write: if false;
     }

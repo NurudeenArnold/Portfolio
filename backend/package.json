@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-backend",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.6.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^13.0.1",
+    "typescript": "^5.5.4"
+  }
+}
